@@ -24,6 +24,7 @@
         <activity android:name=".zahid.appbar.MenuActivity" />
         <activity android:name=".zahid.appbar.AppBarActivity" />
         <activity android:name=".MainActivity">
+            <nav-graph android:value="@navigation/my_nav_graph" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

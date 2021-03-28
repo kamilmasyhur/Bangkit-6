@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph_2"
+    app:startDestination="@id/AFragment">
+
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="com.kamilmasyhur.dicoding.myapplication.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/action_AFragment_to_BFragment"
+            app:destination="@id/BFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="com.kamilmasyhur.dicoding.myapplication.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b">
+        <action
+            android:id="@+id/action_BFragment_to_AFragment"
+            app:destination="@id/AFragment" />
+        <argument
+            android:name="name"
+            android:defaultValue="Budi"
+            app:argType="string" />
+        <deepLink
+            android:id="@+id/deepLink3"
+            app:uri="bangkitNavGraph://second-fragment" />
+    </fragment>
+</navigation>
